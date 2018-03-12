@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Rock+Salt|Open+Sans');
+$headingfont: 'Rock Salt', cursive;
+$secondaryfont: 'Luckiest Guy', cursive;
+$primaryfont: 'Open Sans', sans-serif;
+$primarycolor: #FFB000;
+$secondarycolor: #222438;
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+#add-board {
+    display: block;
+    margin: 0 auto;
+    font-size: 3em;
+    padding: 30px;
+    color: $primarycolor;
+    background-color: $secondarycolor;
+    font-family: $secondaryfont;
+    border: none;
+    border-radius: 20px;
+}
+.board {
+	text-align: center;
+    .board-header {
+    	margin-top: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        .board-description {
+            margin-top: 0;
+            display: inline-block;
+            font-family: $secondaryfont;
+            font-size: 7em;
+            color: $secondarycolor;
+            text-shadow: 1px 1px $primarycolor, 2px 2px $primarycolor, 3px 3px $primarycolor, 4px 4px $primarycolor, 5px 5px $primarycolor;
+        }
+        .remove-board-button {
+            font-family: $secondaryfont;
+            line-height: 12px;
+            font-size: 2em;
+            background-color: transparent;
+            border: none;
+            color: #993333;
+            outline: none;
+        }
+    }
+}
+.focused {
+    box-shadow: 0 0 20px lighten($primarycolor, 20%);
+    border: 2px solid lighten($primarycolor, 20%);
+}
+.board-form {
+    background-color: lighten($secondarycolor, 15%);
+    border-radius: 10px;
+    min-height: 50px;
+    min-width: 250px;
+    display: inline-flex;
+    justify-content: space-between;
+    .add-column-input {
+        background-color: lighten($secondarycolor, 15%);
+        border: none;
+        color: white;
+        font-family: $primaryfont;
+        &:focus {
+            outline: none;
+        }
+    }
+    .add-column-button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        background-color: lighten($secondarycolor, 5%);
+        border-radius: 50%; // padding: 10 6px;
+        text-align: center;
+        line-height: 0px;
+        font-size: 24px;
+        outline: none;
+        color: $primarycolor;
+        font-family: $primaryfont;
+        border: none;
+    }
+}
+.column-container {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.column {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 20px solid $primarycolor;
+    color: white;
+    min-height: 350px;
+    flex: 1;
+    font-family: $primaryfont;
+    position: relative;
+    background-color: $secondarycolor;
+    margin: 10px;
+    .column-title {
+        padding: 0.5% 2%;
+        font-family: $headingfont;
+        text-align: center;
+        font-size: 2em;
+        margin: 0;
+        color: $primarycolor;
+    }
+    .focused {
+        box-shadow: 0 0 2px lighten($primarycolor, 20%);
+        border: 1px solid lighten($primarycolor, 20%);
+    }
+    .column-form {
+        background-color: lighten($secondarycolor, 15%);
+        border-radius: 5px;
+        margin-left: 3%;
+        min-height: 35px;
+        display: flex;
+        .column-input {
+            background-color: lighten($secondarycolor, 15%);
+            border: none;
+            color: white;
+            font-family: $primaryfont;
+            &:focus {
+                outline: none;
+            }
+        }
+        .add-card {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-right: 5px;
+            background-color: lighten($secondarycolor, 5%);
+            border-radius: 50%;
+            padding: 0 6px;
+            text-align: center;
+            line-height: 0;
+            font-size: 24px;
+            outline: none;
+            color: $primarycolor;
+            font-family: $primaryfont;
+            border: none;
+        }
+    }
+}
+.column-delete-button {
+    position: absolute;
+    top: -15px;
+    right: -25px;
+    font-family: $secondaryfont;
+    line-height: 12px;
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+    color: #993333;
+}
+.column-card-list {
+    align-self: stretch;
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    flex-direction: column;
+    padding: 0 4%;
+    flex: 1;
+    justify-content: stretch;
+    text-align: center;
+    .card {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        background-color: #a8054b;
+        font-family: 'Open Sans', sans-serif;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        .card-description {
+            margin-left: 5px;
+        }
+        .card-delete-button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            font-family: $secondaryfont;
+            margin-right: 5px;
+        }
+    }
+}
+::placeholder {
+    padding-left: 5px;
+    font-family: $primaryfont;
+    font-style: italic;
+    color: lighten($primarycolor, 35%);
+}

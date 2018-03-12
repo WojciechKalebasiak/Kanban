@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Rock+Salt|Open+Sans");
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#add-board {
+  display: block;
+  margin: 0 auto;
+  font-size: 3em;
+  padding: 30px;
+  color: #FFB000;
+  background-color: #222438;
+  font-family: "Luckiest Guy", cursive;
+  border: none;
+  border-radius: 20px;
+}
+
+.board {
+  text-align: center;
+}
+
+.board .board-header {
+  margin-top: 5%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: relative;
+}
+
+.board .board-header .board-description {
+  margin-top: 0;
+  display: inline-block;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 7em;
+  color: #222438;
+  text-shadow: 1px 1px #FFB000, 2px 2px #FFB000, 3px 3px #FFB000, 4px 4px #FFB000, 5px 5px #FFB000;
+}
+
+.board .board-header .remove-board-button {
+  font-family: "Luckiest Guy", cursive;
+  line-height: 12px;
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
+  color: #993333;
+  outline: none;
+}
+
+.focused {
+  box-shadow: 0 0 20px #ffd066;
+  border: 2px solid #ffd066;
+}
+
+.board-form {
+  background-color: #3f4368;
+  border-radius: 10px;
+  min-height: 50px;
+  min-width: 250px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.board-form .add-column-input {
+  background-color: #3f4368;
+  border: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+.board-form .add-column-input:focus {
+  outline: none;
+}
+
+.board-form .add-column-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: #2c2e48;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 0px;
+  font-size: 24px;
+  outline: none;
+  color: #FFB000;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+}
+
+.column-container {
+  margin-top: 5%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.column {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  border: 20px solid #FFB000;
+  color: white;
+  min-height: 350px;
+  -ms-flex: 1;
+      flex: 1;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  background-color: #222438;
+  margin: 10px;
+}
+
+.column .column-title {
+  padding: 0.5% 2%;
+  font-family: "Rock Salt", cursive;
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+  color: #FFB000;
+}
+
+.column .focused {
+  box-shadow: 0 0 2px #ffd066;
+  border: 1px solid #ffd066;
+}
+
+.column .column-form {
+  background-color: #3f4368;
+  border-radius: 5px;
+  margin-left: 3%;
+  min-height: 35px;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.column .column-form .column-input {
+  background-color: #3f4368;
+  border: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+.column .column-form .column-input:focus {
+  outline: none;
+}
+
+.column .column-form .add-card {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  background-color: #2c2e48;
+  border-radius: 50%;
+  padding: 0 6px;
+  text-align: center;
+  line-height: 0;
+  font-size: 24px;
+  outline: none;
+  color: #FFB000;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+}
+
+.column-delete-button {
+  position: absolute;
+  top: -15px;
+  right: -25px;
+  font-family: "Luckiest Guy", cursive;
+  line-height: 12px;
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
+  color: #993333;
+}
+
+.column-card-list {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 0 4%;
+  -ms-flex: 1;
+      flex: 1;
+  -ms-flex-pack: stretch;
+      justify-content: stretch;
+  text-align: center;
+}
+
+.column-card-list .card {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+  background-color: #a8054b;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.column-card-list .card .card-description {
+  margin-left: 5px;
+}
+
+.column-card-list .card .card-delete-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  font-family: "Luckiest Guy", cursive;
+  margin-right: 5px;
+}
+
+::-webkit-input-placeholder {
+  padding-left: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  color: #ffe7b3;
+}
+
+:-ms-input-placeholder {
+  padding-left: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  color: #ffe7b3;
+}
+
+::placeholder {
+  padding-left: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  color: #ffe7b3;
+}
+/*# sourceMappingURL=style.css.map */
